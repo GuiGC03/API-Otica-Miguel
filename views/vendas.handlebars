@@ -1,0 +1,29 @@
+<form class="form">
+<h1>Lista de vendas:</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>CPF</th>
+      <th>ID Prescrição</th>
+      <th>Produto</th>
+      <th>Quantidade</th>
+      <th>Preço Unitário</th>
+      <th>Data de Venda</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each vendas}}
+      <tr>
+        <td>#<a href="/vendas/{{this.cpf}}">{{this.id}}</a></td> 
+        <td>{{this.cpf}}</td>
+        <td>{{this.id_prescricao}}</td>
+        <td>{{this.id_produto}}</td>
+        <td>{{this.quantidade}}</td>
+        <td>{{this.preco_unitario}}</td>
+        <td>{{dateFormat this.data_venda "HH:mm:ss"}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+</form>

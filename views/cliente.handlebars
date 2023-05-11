@@ -1,0 +1,21 @@
+<form class="form">
+<div id="cliente-page">
+    <div class="container">
+    <button class="btn btn-blue"><a href="/clientes">Voltar</a></button>
+  </div>
+  <div class="container">
+        <h2>{{cliente.nome}}</h2>
+        <p>{{cliente.cpf}}</p>
+        <p>{{dateFormat cliente.DataNasc "HH:mm:ss"}}</p>
+        <p>{{cliente.endereco}}</p>
+        <p>{{cliente.fone}}</p>
+        <p>{{cliente.email}}</p>
+        <div class="actions">
+        <a href="/clientes/edit/{{cliente.cpf}}">Editar</a>
+        <form action="/clientes/remove/{{cliente.cpf}}" method="POST">
+        <input type="submit" value="Remover">
+        </form>
+      </div>
+    </div>
+  </div>
+</form>

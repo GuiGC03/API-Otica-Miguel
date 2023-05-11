@@ -1,0 +1,74 @@
+<h1>Edite a prescrição:</h1>
+<form class="form" action="/prescricoes/updateprescricao" method="POST">
+
+  <input type="hidden" name="cpf" value="{{prescricao.cpf}}">
+  <div class="form-control">
+    <label for="nome_cliente">Nome do cliente:</label>
+    <input type="text" name="nome_cliente" placeholder="Digite o nome do cliente" value="{{prescricao.nome_cliente}}">
+  </div>
+
+  <div class="form-control">
+    <label for="data_prescricao">Data da prescrição cliente:</label>
+    <input type="date" name="data_prescricao" placeholder="Digite a data da prescrição do cliente" value="{{prescricao.data_prescricao}}">
+  </div>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th colspan="3">Longe</th>
+      <th colspan="3">Perto</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>OD</th>
+      <th>OE</th>
+      <th></th>
+      <th>OD</th>
+      <th>OE</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Esfera</td>
+      <td><input type="number" step="0.25" name="grau_esferico_od_longe" value="{{prescricao.grau_esferico_od_longe}}"></td>
+      <td><input type="number" step="0.25" name="grau_esferico_oe_longe" value="{{prescricao.grau_esferico_oe_longe}}"></td>
+      <td></td>
+      <td><input type="number" step="0.25" name="grau_esferico_od_perto" value="{{prescricao.grau_esferico_od_perto}}"></td>
+      <td><input type="number" step="0.25" name="grau_esferico_oe_perto" value="{{prescricao.grau_esferico_oe_perto}}"></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Cilindro</td>
+      <td><input type="number" step="0.25" name="grau_cilindrico_od_longe" value="{{prescricao.grau_cilindrico_od_longe}}"></td>
+      <td><input type="number" step="0.25" name="grau_cilindrico_oe_longe" value="{{prescricao.grau_cilindrico_oe_longe}}"></td>
+      <td></td>
+      <td><input type="number" step="0.25" name="grau_cilindrico_od_perto" value="{{prescricao.grau_cilindrico_od_perto}}"></td>
+      <td><input type="number" step="0.25" name="grau_cilindrico_oe_perto" value="{{prescricao.grau_cilindrico_oe_perto}}"></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Eixo</td>
+      <td><input type="number" step="1" name="eixo_od_longe" value="{{prescricao.eixo_od_longe}}"></td>
+      <td><input type="number" step="1" name="eixo_oe_longe" value="{{prescricao.eixo_oe_longe}}"></td>
+      <td></td>
+      <td><input type="number" step="1" name="eixo_od_perto" value="{{prescricao.eixo_od_perto}}"></td>
+      <td><input type="number" step="1" name="eixo_oe_perto" value="{{prescricao.eixo_oe_perto}}"></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+  <div class="form-control">
+    <label for="tipo_lente">Tipo de Lente</label>
+    <input type="text" name="tipo_lente" placeholder="Sua data de nascimento" value="{{cliente.tipo_lente}}">
+</div>
+
+  <div class="form-control">
+    <label for="marca_lente">Marca da lente:</label>
+    <input type="text" name="marca_lente" placeholder="Digite a marca da lente" value="{{prescricao.marca_lente}}">
+  </div>
+
+  <input type="submit" value="Editar">
+</form>

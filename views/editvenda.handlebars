@@ -1,0 +1,37 @@
+<h1>Edite as informações da sua venda:</h1>
+<form class="form" action="/vendas/updatevenda" method="POST">
+
+  <input type="hidden" name="cpf" value="{{venda.cpf}}">
+  
+  {{!-- <div class="form-control">
+    <label for="cpf">CPF</label>
+    <input type="text" name="cpf" placeholder="Digite o CPF" value="{{cliente.cpf}}">
+  </div> --}}
+
+  <div class="form-control">
+    <label for="id_prescricao">ID da Prescrição</label>
+    <input type="text" name="id_prescricao" placeholder="Digite o ID da Prescrição" value="{{venda.id_prescricao}}">
+  </div>
+
+  <div class="form-control">
+    <label for="id_produto">ID do Produto</label>
+    <input type="text" name="id_produto" placeholder="Digite o ID do Produto" value="{{venda.id_produto}}">
+  </div>
+
+  <div class="form-control">
+    <label for="quantidade">Quantidade</label>
+    <input type="number" name="quantidade" placeholder="Digite a quantidade" value="{{venda.quantidade}}">
+  </div>
+
+  <div class="form-control">
+    <label for="preco_unitario">Preço Unitário</label>
+    <input type="text" name="preco_unitario" placeholder="Digite o preço unitário" value="{{venda.preco_unitario}}">
+  </div>
+
+  <div class="form-control">
+    <label for="data_venda">Data da Venda</label>
+    <input type="date" name="data_venda" value="{{venda.data_venda}}">
+  </div>
+
+  <input type="submit" value="Editar">
+</form>

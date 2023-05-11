@@ -1,0 +1,52 @@
+  <div class="container">
+    <button class="btn btn-blue"><a href="/prescricoes">Voltar</a></button>
+  </div>
+<div id="prescricao-page">
+</div>
+<br>
+<table>
+  <thead>
+    <tr>
+      <th colspan="3">Longe</th>
+      <th colspan="3">Perto</th>
+    </tr>
+    <tr>
+      <th>Olho</th>
+      <th>Esfera</th>
+      <th>Cilindro</th>
+      <th>Olho</th>
+      <th>Esfera</th>
+      <th>Cilindro</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>OD</td>
+      <td>{{prescricao.grau_esferico_od_longe}}</td>
+      <td>{{prescricao.grau_cilindrico_od_longe}}</td>
+      <td>OD</td>
+      <td>{{prescricao.grau_esferico_od_perto}}</td>
+      <td>{{prescricao.grau_cilindrico_od_perto}}</td>
+    </tr>
+    <tr>
+      <td>OE</td>
+      <td>{{prescricao.grau_esferico_oe_longe}}</td>
+      <td>{{prescricao.grau_cilindrico_oe_longe}}</td>
+      <td>OE</td>
+      <td>{{prescricao.grau_esferico_oe_perto}}</td>
+      <td>{{prescricao.grau_cilindrico_oe_perto}}</td>
+    </tr>
+  </tbody>
+</table>
+<p><strong>Tipo de lente:</strong> {{prescricao.tipo_lente}}</p>
+<p><strong>Marca da lente:</strong> {{prescricao.marca_lente}}</p>
+
+
+        <div class="actions">
+        <a href="/prescricoes/edit/{{prescricao.cpf}}">Editar</a>
+        <form action="/prescricoes/remove/{{prescricao.cpf}}" method="POST">
+        <input type="submit" value="Remover">
+        </form>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,34 @@
+
+<h1>Lista de Prescrições:</h1>
+<table class="form">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nome do cliente</th>
+      <th>Data da prescrição</th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each prescricoes}}
+    <tr>
+      <td>{{this.id}}</td>
+      <td><a href="/prescricoes/{{this.cpf}}">{{this.nome_cliente}}</a></td>
+      <td>{{dateFormat this.data_prescricao "HH:mm:ss"}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+          {{this.grau_esferico_od_longe}}
+          {{this.grau_cilindrico_od_longe}}
+          {{this.eixo_od_longe}}
+          {{this.grau_esferico_oe_longe}}
+          {{this.grau_cilindrico_oe_longe}}
+          {{this.eixo_oe_longe}}
+          {{this.grau_esferico_od_perto}}
+          {{this.grau_cilindrico_od_perto}}
+          {{this.eixo_od_perto}}
+          {{this.grau_esferico_oe_perto}}
+          {{this.grau_cilindrico_oe_perto}}
+          {{this.eixo_oe_perto}}
+          {{this.tipo_lente}}
+          {{this.marca_lente}}

@@ -1,0 +1,22 @@
+<form class="form">
+<div id="estoque-page">
+    <div class="container">
+    <button class="btn btn-blue"><a href="/estoques">Voltar</a></button>
+  </div>
+  <div class="container">
+        <h2>{{estoque.descricao_produto}}</h2>
+        <p>{{estoque.tipo_lente}}</p>
+        <p>{{estoque.marca_lente}}</p>
+        <p>{{estoque.quantidade}}</p>
+        <p>{{estoque.preco_unitario}}</p>
+        <p>{{dateFormat estoque.data_entrada "HH:mm:ss"}}</p>
+        <p>{{dateFormat estoque.data_validade "HH:mm:ss"}}</p>
+        <div class="actions">
+        <a href="/estoques/edit/{{estoque.id}}">Editar</a>
+        <form action="/estoques/remove/{{estoque.id}}" method="POST">
+        <input type="submit" value="Remover">
+        </form>
+      </div>
+    </div>
+  </div>  
+</form>

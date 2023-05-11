@@ -1,0 +1,29 @@
+<h1>Edite as informações do cliente:</h1>
+<form class="form" action="/clientes/updatecliente" method="POST">
+  <input type="hidden" name="cpf" value="{{cliente.cpf}}">
+  <div class="form-control">
+    <label for="nome">Nome:</label>
+    <input type="text" name="nome" placeholder="Seu nome" value="{{cliente.nome}}">
+</div>
+
+<div class="form-control">
+    <label for="DataNasc">Data de Nascimento:</label>
+    <input type="date" name="DataNasc" placeholder="Sua data de nascimento" value="{{cliente.DataNasc}}">
+</div>
+
+<div class="form-control">
+    <label for="endereco">Endereço:</label>
+    <input type="text" name="endereco" placeholder="Seu endereço" value="{{cliente.endereco}}">
+</div>
+
+<div class="form-control">
+    <label for="fone">Telefone:</label>
+    <input type="text" name="fone" placeholder="Seu telefone" value="{{cliente.telefone}}">
+</div>
+
+<div class="form-control">
+    <label for="email">Email:</label>
+    <input type="email" name="email" placeholder="Seu email" value="{{cliente.email}}">
+</div>
+  <input type="submit" value="Editar">
+</form>

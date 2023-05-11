@@ -1,0 +1,36 @@
+<h1>Edite as informações do produto:</h1>
+<form class="form" action="/estoques/updateestoque" method="POST">
+
+  <input type="hidden" name="id" value="{{estoque.id}}">
+
+  <div class="form-control">
+    <label for="descricao_produto">Descrição do produto:</label>
+    <input type="text" name="descricao_produto" placeholder="Digite a descrição do produto" value="{{estoque.descricao_produto}}">
+</div>
+
+<div class="form-control">
+    <label for="tipo_lente">Tipo de Lente:</label>
+    <input type="text" name="tipo_lente" placeholder="Digite o tipo da lente" value="{{estoque.tipo_lente}}">
+</div>
+
+<div class="form-control">
+    <label for="quantidade">Quantidade:</label>
+    <input type="text" name="quantidade" placeholder="Seu endereço" value="{{estoque.quantidade}}">
+</div>
+
+<div class="form-control">
+    <label for="preco_unitario">Preco unitario:</label>
+    <input type="number" name="preco_unitario" placeholder="Digite o preco unitario" value="{{estoque.preco_unitario}}">
+</div>
+
+<div class="form-control">
+    <label for="data_entrada">Data de entrada:</label>
+    <input type="date" name="data_entrada" placeholder="Digite a data de entrada" value="{{estoque.data_entrada}}">
+  </div>
+
+  <div class="form-control">
+    <label for="data_validade">Data de validade:</label>
+    <input type="date" name="data_validade" placeholder="Digite a data de validade" value="{{estoque.data_validade}}">
+  </div>
+  <input type="submit" value="Editar">
+</form>

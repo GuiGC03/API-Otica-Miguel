@@ -1,0 +1,332 @@
+/* -- Resoluções de tela --*/
+
+/* Estilos básicos */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para dispositivos pequenos */
+@media only screen and (max-width: 767px) {
+    /* Reajuste as fontes e o espaçamento */
+    body {
+        font-size: 14px;
+        line-height: 1.3;
+    }
+
+    /* Altera o layout do cabeçalho para que ele ocupe toda a largura da tela */
+    .cabecalho {
+        width: 100%;
+    }
+
+    /* Altera o layout da lista de navegação para que ocupe toda a largura da tela e exiba os itens verticalmente */
+    #navbar ul {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Estilo para o link de navegação */
+    .nav-link {
+        display: block;
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+    }
+
+    /* Estilo para o ícone da navegação */
+    .nav-link i {
+        margin-right: 5px;
+    }
+}
+
+/* Estilos para dispositivos médios */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    /* Ajusta o tamanho da fonte */
+    body {
+        font-size: 15px;
+    }
+}
+
+/* Estilos para dispositivos grandes */
+@media only screen and (min-width: 992px) {
+    /* Ajusta o tamanho da fonte */
+    body {
+        font-size: 18px;
+    }
+}
+
+/* Estilos gerais para celulares */
+body {
+  font-size: 16px;
+}
+
+/* Ajustes para telas menores */
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+  
+  .cabecalho {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .cabecalho ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+  
+  .cabecalho li {
+    margin: 10px 0;
+  }
+  
+  .nav-link {
+    font-size: 14px;
+    padding: 5px;
+  }
+}
+
+/* --Estilo do cabeçalho-- */
+
+/* Definir a transição para os elementos filhos da lista */
+.cabecalho ul li {
+  transition: all 0.3s ease-in-out;
+}
+
+.animate-header {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* Definir o estilo padrão dos elementos filhos da lista */
+.cabecalho ul li a {
+  display: block;
+  padding: 0px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Definir o estilo dos ícones */
+.cabecalho ul li a i {
+  margin-right: 10px;
+}
+
+/* Definir a cor de fundo dos elementos da lista */
+.cabecalho ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+/* Estilo do título principal */
+h1 {
+  text-align: center;
+  margin: 1.5em 0;
+  font-size: 2.5em;
+  color: #444;
+  text-shadow: 1px 1px #fff;
+}
+
+/* Estilo do formulário */
+.form {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  padding: 1em;
+  box-shadow: 2px 2px #ccc;
+  border-radius: 5px;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+.form-control label {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 0.3em;
+}
+
+.form-control input {
+  padding: 5px;
+  font-size: 1.2em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.form-control input:focus {
+  border-color: #555;
+}
+
+.form-control input[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.form-control input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+  
+  /* CLientes */
+  .clientes-container {
+    width: 450px;
+    margin: 0 auto;
+  }
+  
+  .clientes-container div {
+    border-bottom: 1px solid #ccc;
+    padding: 5px;
+    margin: 5px;
+  }
+  
+  .bold {
+    font-weight: bold;
+  }
+  
+  /* Cliente */
+  #cliente-page {
+    padding: 2em;
+  }
+  
+  #cliente-page .container {
+    text-align: center;
+  }
+  
+  .actions {
+    margin-top: 1em;
+  }
+  
+
+/* Tabela */
+
+table {
+  font-family: Arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+td, th {
+  border: 1px solid #ddd;
+  text-align: center;
+  padding: 8px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+input[type=number] {
+  width: 60px;
+  padding: 6px 10px;
+  margin: 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type=number]:focus {
+  outline: none;
+  border: 1px solid #4CAF50;
+}
+
+input::placeholder {
+  color: #ccc;
+}
+
+.titulo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+
+/* Tabela */
+
+
+.cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  background-color: #f5f5f5;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0 2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.cabecalho a {
+  color: #333;
+  text-decoration: none;
+  margin-right: 2rem;
+}
+
+.cabecalho ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cabecalho ul li {
+  margin-left: 2rem;
+}
+
+.cabecalho ul li:first-child {
+  margin-left: 0;
+}
+
+.cabecalho ul li a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.2s ease-in-out;
+}
+
+.cabecalho ul li a:hover {
+  color: #0077cc;
+}
+
+
+/* botoes */
+
+.btn {
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  text-decoration: aqua;
+}
+

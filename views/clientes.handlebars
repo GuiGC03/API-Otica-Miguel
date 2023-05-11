@@ -1,0 +1,25 @@
+<h1>Lista de clientes:</h1>
+<table class="form">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>CPF</th>
+      <th>Data de Nascimento</th>
+      <th>Endereço</th>
+      <th>Telefone</th>
+      <th>E-mail</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each clientes}}
+      <tr>
+        <td><a href="/clientes/{{this.cpf}}">{{this.nome}}</a></td>
+        <td>{{this.cpf}}</td>
+        <td>{{dateFormat this.DataNasc "HH:mm:ss"}}</td> 
+        <td>{{this.endereco}}</td>
+        <td>{{this.fone}}</td>
+        <td>{{this.email}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

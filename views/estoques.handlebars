@@ -1,0 +1,29 @@
+<h1>Lista de produtos:</h1>
+<table class="form">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Descrição do produto</th>
+      <th>Tipo de lente</th>
+      <th>Marca de lente</th>
+      <th>Quantidade</th>
+      <th>Preço unitário</th>
+      <th>Data de entrada</th>
+      <th>Data de validade</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each estoques}}
+      <tr>
+        <td><a href="/estoques/{{this.id}}">{{this.id}}</a></td>
+        <td>{{this.descricao_produto}}</td>
+        <td>{{this.tipo_lente}}</td>
+        <td>{{this.marca_lente}}</td>
+        <td>{{this.quantidade}}</td>
+        <td>{{this.preco_unitario}}</td>
+        <td>{{dateFormat this.data_entrada "HH:mm:ss"}}</td>
+        <td>{{dateFormat this.data_validade "HH:mm:ss"}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

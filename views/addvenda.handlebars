@@ -1,0 +1,35 @@
+<h1>Cadastre a sua venda:</h1>
+<form class="form" action="/vendas/insertvenda" method="POST">
+
+  <div class="form-control">
+    <label for="cpf">CPF:</label>
+    <input type="text" name="cpf" placeholder="Digite o CPF">
+  </div>
+
+  <div class="form-control">
+    <label for="id_prescricao">ID Prescrição:</label>
+    <input type="text" name="id_prescricao" placeholder="Digite o ID da prescrição">
+  </div>
+
+  <div class="form-control">
+    <label for="id_produto">ID Produto:</label>
+    <input type="text" name="id_produto" placeholder="Digite o ID do produto">
+  </div>
+
+  <div class="form-control">
+    <label for="quantidade">Quantidade:</label>
+    <input type="number" name="quantidade" placeholder="Digite a quantidade">
+  </div>
+
+  <div class="form-control">
+    <label for="preco_unitario">Preço unitário:</label>
+    <input type="text" name="preco_unitario" placeholder="Digite o preço unitário">
+  </div>
+
+  <div class="form-control">
+    <label for="data_venda">Data da venda:</label>
+    <input type="date" name="data_venda">
+  </div>
+
+  <input type="submit" value="Cadastrar">
+</form>

@@ -1,0 +1,44 @@
+<h1>Cadastre o produto:</h1>
+<form class="form" action="/estoques/insertestoque" method="POST">
+  
+  <div class="form-control">
+    <label for="descricao_produto">Descrição do produto:</label>
+    <input type="text" name="descricao_produto" placeholder="Digite a descrição do produto">
+  </div>
+
+  <div class="form-control">
+  <label for="tipo_lente">Tipo de Lente:</label>
+  <select id="tipo_lente" name="tipo_lente">
+    <option value="monofocal">Monofocal</option>
+    <option value="bifocal">Bifocal</option>
+    <option value="progressiva">Progressiva</option>
+  </select>
+  </div>
+
+  <div class="form-control">
+    <label for="marca_lente">Marca da lente:</label>
+    <input type="text" name="marca_lente" placeholder="Digite a marca da lente">
+  </div>
+
+  <div class="form-control">
+    <label for="quantidade">Quantidade:</label>
+    <input type="number" name="quantidade" placeholder="Digite a quantidade">
+  </div>
+
+  <div class="form-control">
+    <label for="preco_unitario">Preco unitario:</label>
+    <input type="text" name="preco_unitario" placeholder="Digite o preco unitario">
+  </div>
+
+  <div class="form-control">
+    <label for="data_entrada">Data de entrada:</label>
+    <input type="date" name="data_entrada" placeholder="Digite a data de entrada">
+  </div>
+
+  <div class="form-control">
+    <label for="data_validade">Data de validade:</label>
+    <input type="date" name="data_validade" placeholder="Digite a data de validade">
+  </div>
+
+  <input type="submit" value="Cadastrar">
+</form>
